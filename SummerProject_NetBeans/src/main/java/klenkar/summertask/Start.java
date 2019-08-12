@@ -91,7 +91,7 @@ public class Start {
     private void listApplicants() {
         connection = ConnectToDatabase.getConnection();
         try {
-            PreparedStatement expression = connection.prepareStatement("Selest * from applicants");
+            PreparedStatement expression = connection.prepareStatement("Select * from applicant");
             ResultSet rs = expression.executeQuery();
             while (rs.next()) {
                 System.out.println(rs.getInt("id") + " " + rs.getString("firstName") + " " + rs.getString("lastName"));
