@@ -5,6 +5,10 @@
  */
 package klenkar.summertask;
 
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 import java.sql.Connection;
@@ -42,6 +46,13 @@ public class Start {
                     break;
                 case 5:
                     openEra();
+                    break;
+                case 6:
+                    openGitHubCode();
+                    break;
+                case 7:
+                    break main_loop;
+                default:
                     break;
 
             }
@@ -182,6 +193,27 @@ public class Start {
     }
 
     private void openEra() {
-      
+        String url = "https://github.com/JelenaKlenkar/SummerProject_NetBeans/blob/master/SummerProject_NetBeans/src/main/java/era/human_resources.png";
+        if (Desktop.isDesktopSupported()) {
+            Desktop desktop = Desktop.getDesktop();
+            try {
+                desktop.browse(new URI(url));
+            } catch (IOException | URISyntaxException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
+
+    private void openGitHubCode() {
+        String url = "https://github.com/JelenaKlenkar/SummerProject_NetBeans/tree/master/SummerProject_NetBeans/src/main/java/klenkar/summertask";
+
+        if (Desktop.isDesktopSupported()) {
+            Desktop desktop = Desktop.getDesktop();
+            try {
+                desktop.browse(new URI(url));
+            } catch (IOException | URISyntaxException ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 }
