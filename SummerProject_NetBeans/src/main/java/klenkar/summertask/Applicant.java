@@ -23,6 +23,23 @@ public class Applicant {
     private String applicantCV;
     private String motivationalLetter;
     
+      //default constructor
+    public Applicant() {
+    }
+    
+    //parameterized constructor
+    public Applicant(int id, String firstName, String lastName, String address, int phoneNumber, String email, int personalIdentificationNumber, String applicantCV, String motivationalLetter) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.personalIdentificationNumber = personalIdentificationNumber;
+        this.applicantCV = applicantCV;
+        this.motivationalLetter = motivationalLetter;
+    }
+     
     
     //public methods
 
