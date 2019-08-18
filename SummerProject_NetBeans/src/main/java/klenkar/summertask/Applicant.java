@@ -10,23 +10,22 @@ package klenkar.summertask;
  * @author Jelena
  */
 public class Applicant {
-    
+
     //define private fields
-    
     private int id;
     private String firstName;
     private String lastName;
     private String address;
     private int phoneNumber;
     private String email;
-    private  int personalIdentificationNumber;
+    private int personalIdentificationNumber;
     private String applicantCV;
     private String motivationalLetter;
-    
-      //default constructor
+
+    //default constructor
     public Applicant() {
     }
-    
+
     //parameterized constructor
     public Applicant(int id, String firstName, String lastName, String address, int phoneNumber, String email, int personalIdentificationNumber, String applicantCV, String motivationalLetter) {
         this.id = id;
@@ -39,10 +38,8 @@ public class Applicant {
         this.applicantCV = applicantCV;
         this.motivationalLetter = motivationalLetter;
     }
-     
-    
-    //public methods
 
+    //public methods
     /**
      * @return the id
      */
@@ -135,7 +132,8 @@ public class Applicant {
     }
 
     /**
-     * @param personalIdentificationNumber the personalIdentificationNumber to set
+     * @param personalIdentificationNumber the personalIdentificationNumber to
+     * set
      */
     public void setPersonalIdentificationNumber(int personalIdentificationNumber) {
         this.personalIdentificationNumber = personalIdentificationNumber;
@@ -171,8 +169,7 @@ public class Applicant {
 
     @Override
     public String toString() {
-        return getFirstName() + " " + getLastName(); 
+        return getFirstName() + " " + getLastName();
     }
-    
-    
+
 }
