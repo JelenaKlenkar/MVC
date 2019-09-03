@@ -16,9 +16,9 @@ public class Applicant {
     private String firstName;
     private String lastName;
     private String address;
-    private int phoneNumber;
+    private String phoneNumber;
     private String email;
-    private int personalIdentificationNumber;
+    private String personalIdentificationNumber;
     private String applicantCV;
     private String motivationalLetter;
 
@@ -27,7 +27,7 @@ public class Applicant {
     }
 
     //parameterized constructor
-    public Applicant(int id, String firstName, String lastName, String address, int phoneNumber, String email, int personalIdentificationNumber, String applicantCV, String motivationalLetter) {
+    public Applicant(int id, String firstName, String lastName, String address, String phoneNumber, String email, String personalIdentificationNumber, String applicantCV, String motivationalLetter) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -99,14 +99,14 @@ public class Applicant {
     /**
      * @return the phoneNumber
      */
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
     /**
      * @param phoneNumber the phoneNumber to set
      */
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -127,7 +127,7 @@ public class Applicant {
     /**
      * @return the personalIdentificationNumber
      */
-    public int getPersonalIdentificationNumber() {
+    public String getPersonalIdentificationNumber() {
         return personalIdentificationNumber;
     }
 
@@ -135,7 +135,7 @@ public class Applicant {
      * @param personalIdentificationNumber the personalIdentificationNumber to
      * set
      */
-    public void setPersonalIdentificationNumber(int personalIdentificationNumber) {
+    public void setPersonalIdentificationNumber(String personalIdentificationNumber) {
         this.personalIdentificationNumber = personalIdentificationNumber;
     }
 

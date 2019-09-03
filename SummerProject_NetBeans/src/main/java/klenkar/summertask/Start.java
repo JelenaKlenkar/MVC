@@ -76,9 +76,9 @@ public class Start {
         a.setFirstName(Helper.enterString("Enter first name: "));
         a.setLastName(Helper.enterString("Enter last name: "));
         a.setAddress(Helper.enterString("Enter address: "));
-        a.setPhoneNumber(Helper.enterInteger("Enter phone number: "));
+        a.setPhoneNumber(Helper.enterString("Enter phone number: "));
         a.setEmail(Helper.enterString("Enter email: "));
-        a.setPersonalIdentificationNumber(Helper.enterInteger("Enter personal identification number: "));
+        a.setPersonalIdentificationNumber(Helper.enterString("Enter personal identification number: "));
         a.setApplicantCV(Helper.enterString("Enter applicant CV: "));
         a.setMotivationalLetter(Helper.enterString("Enter motivational letter: "));
         return a;
@@ -116,9 +116,9 @@ public class Start {
             expression.setString(2, a.getFirstName());
             expression.setString(3, a.getLastName());
             expression.setString(4, a.getAddress());
-            expression.setInt(5, a.getPhoneNumber());
+            expression.setString(5, a.getPhoneNumber());
             expression.setString(6, a.getEmail());
-            expression.setInt(7, a.getPersonalIdentificationNumber());
+            expression.setString(7, a.getPersonalIdentificationNumber());
             expression.setString(8, a.getApplicantCV());
             expression.setString(10, a.getMotivationalLetter());
         } catch (Exception e) {
@@ -156,9 +156,9 @@ public class Start {
             expressionUpdate.setString(1, a.getFirstName());
             expressionUpdate.setString(2, a.getLastName());
             expressionUpdate.setString(3, a.getAddress());
-            expressionUpdate.setInt(4, a.getPhoneNumber());
+            expressionUpdate.setString(4, a.getPhoneNumber());
             expressionUpdate.setString(5, a.getEmail());
-            expressionUpdate.setInt(6, a.getPersonalIdentificationNumber());
+            expressionUpdate.setString(6, a.getPersonalIdentificationNumber());
             expressionUpdate.setString(7, a.getApplicantCV());
             expressionUpdate.setString(8, a.getMotivationalLetter());
         } catch (SQLException e) {
