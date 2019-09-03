@@ -10,11 +10,10 @@ import human_resources.utility.JelenaException;
 import human_resources.utility.ProcessingInterface;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.commons.lang3.math.NumberUtils;
 
-/**
- *
- * @author Jelena
- */
+
+
 public class ProcessingApplicant extends Processing<Applicant> implements ProcessingInterface<Applicant> {
 
     public ProcessingApplicant() {
@@ -26,7 +25,7 @@ public class ProcessingApplicant extends Processing<Applicant> implements Proces
         List<Applicant> applicants = new ArrayList<>();
 
         Applicant a = new Applicant(1, "Ana", "Anić", "Zagrebačka 78, "
-                + "31000 Osijek", 0113257, "aanic@gmail.com", 1222456,
+                + "31000 Osijek", "0113257", "aanic@gmail.com", "1222456",
                 "https://www.thebalancecareers.com/how-to-write-a-curriculum-vitae-cv-2058494",
                 "https://www.mastersavenue.com/articles-guides/how-to-get-in/motivational-letter");
 
@@ -88,10 +87,9 @@ public class ProcessingApplicant extends Processing<Applicant> implements Proces
         if (a.getPhoneNumber() == null) {
             throw new JelenaException("Phone number needs to be entered");
 
-        }
-        
+      
     }
-
+    }
     public boolean delete(Applicant a) {
         System.out.println("Delete from database");
         return true;

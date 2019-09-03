@@ -23,9 +23,9 @@ public class Start {
         a.setFirstName(JOptionPane.showInputDialog("Enter first name: "));
         a.setLastName(JOptionPane.showInputDialog("Enter last name: "));
         a.setAddress(JOptionPane.showInputDialog("Enter address: "));
-        a.setPhoneNumber(Integer.parseInt(JOptionPane.showInputDialog("Enter phone number: ")));
+        a.setPhoneNumber(JOptionPane.showInputDialog("Enter phone number: "));
         a.setEmail(JOptionPane.showInputDialog("Enter email: "));
-        a.setPersonalIdentificationNumber(Integer.parseInt("Enter personal identification number: "));
+        a.setPersonalIdentificationNumber(JOptionPane.showInputDialog("Enter personal identification number: "));
         a.setApplicantCV(JOptionPane.showInputDialog("Enter applicant cv: "));
         a.setMotivationalLetter(JOptionPane.showInputDialog("Enter motivational letter: "));
         
