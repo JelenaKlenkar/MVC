@@ -12,8 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 import org.apache.commons.lang3.math.NumberUtils;
 
-
-
 public class ProcessingApplicant extends Processing<Applicant> implements ProcessingInterface<Applicant> {
 
     public ProcessingApplicant() {
@@ -33,14 +31,19 @@ public class ProcessingApplicant extends Processing<Applicant> implements Proces
         return applicants;
 
     }
+    
 
     public Applicant create(Applicant a) throws JelenaException {
+        controlPhoneNumber(a);
         controlFirstName(a);
         controlLastName(a);
-        return a;
+        a= dao.save(a);
+        return (a);
     }
+  
 
     public void update(Applicant a) throws JelenaException {
+        controlPhoneNumber(a);
         controlFirstName(a);
         controlLastName(a);
         dao.save(a);
@@ -84,12 +87,31 @@ public class ProcessingApplicant extends Processing<Applicant> implements Proces
     }
 
     public void controlPhoneNumber(Applicant a) throws JelenaException {
+
         if (a.getPhoneNumber() == null) {
             throw new JelenaException("Phone number needs to be entered");
 
-      
+        }
+
+        for (char ch : a.getPhoneNumber().toCharArray()) {
+
+            if (!Character.isDigit(ch)) {
+                throw new JelenaException("You need to enter number");
+            }
+
+        }
     }
+
+    public void controlEmail(Applicant a) throws JelenaException {
+        if (a.getEmail() == null || a.getEmail().length() == 0) {
+            throw new JelenaException("Email needs to be entered");
+        }
+        if (a.getEmail() != null) {
+            a.setEmail(a.getEmail().trim());
+        }
+
     }
+
     public boolean delete(Applicant a) {
         System.out.println("Delete from database");
         return true;
